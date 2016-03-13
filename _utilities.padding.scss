@@ -1,0 +1,43 @@
+// Padding Utilities
+
+
+
+
+// Dependencies:
+//   Settings.Default
+//   Settings.Breakpoint
+
+
+
+
+// Options
+
+$iota-padding         : true;
+$iota-padding-default : 10px !default;
+$iota-padding-extra   : () !default;
+
+
+
+
+.#{$iota-utility-namespace}p   { padding        : $iota-padding-default !important; }
+.#{$iota-utility-namespace}pt  { padding-top    : $iota-padding-default !important; }
+.#{$iota-utility-namespace}pr  { padding-right  : $iota-padding-default !important; }
+.#{$iota-utility-namespace}pb  { padding-bottom : $iota-padding-default !important; }
+.#{$iota-utility-namespace}pl  { padding-left   : $iota-padding-default !important; }
+.#{$iota-utility-namespace}pv  { padding-top    : $iota-padding-default !important; padding-bottom : $iota-padding-default !important; }
+.#{$iota-utility-namespace}ph  { padding-right  : $iota-padding-default !important; padding-left   : $iota-padding-default !important; }
+
+
+
+
+@each $name, $size in $iota-padding-extra {
+
+  .#{$iota-utility-namespace}p#{$name}   { padding        : $size !important; }
+  .#{$iota-utility-namespace}pt#{$name}  { padding-top    : $size !important; }
+  .#{$iota-utility-namespace}pr#{$name}  { padding-right  : $size !important; }
+  .#{$iota-utility-namespace}pb#{$name}  { padding-bottom : $size !important; }
+  .#{$iota-utility-namespace}pl#{$name}  { padding-left   : $size !important; }
+  .#{$iota-utility-namespace}pv#{$name}  { padding-top    : $size !important; padding-bottom : $size !important; }
+  .#{$iota-utility-namespace}ph#{$name}  { padding-right  : $size !important; padding-left   : $size !important; }
+
+}

@@ -1,0 +1,20 @@
+{
+  "name": "iotacss-padding",
+  "version": "0.1.0",
+  "description": "Padding utility for iotaCSS",
+  "main": "_utilities.padding.scss",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:iotacss/utilities.padding.git"
+  },
+  "keywords": [
+    "iotacss",
+    "css",
+    "bem",
+    "oocss"
+  ],
+  "dependencies": {
+    "iotacss-default": "0.1.0"
+  },
+  "author": "Dimitris Psaropoulos <info@harby.me>"
+}
