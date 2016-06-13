@@ -41,3 +41,40 @@ $iota-padding-extra   : () !default;
   .#{$iota-utility-namespace}ph#{$name}  { padding-right  : $size !important; padding-left   : $size !important; }
 
 }
+
+
+
+
+// Responsive Text Utilities
+
+@if ($iota-padding--res == true) {
+  
+  @each $breakpointName, $breakpointSize in $iota-breakpoint-sizes {
+    
+    @media #{$breakpointSize} {
+     
+      .#{$iota-utility-namespace}p\@#{$breakpointName}   { padding        : $iota-padding-default !important; }
+      .#{$iota-utility-namespace}pt\@#{$breakpointName}  { padding-top    : $iota-padding-default !important; }
+      .#{$iota-utility-namespace}pr\@#{$breakpointName}  { padding-right  : $iota-padding-default !important; }
+      .#{$iota-utility-namespace}pb\@#{$breakpointName}  { padding-bottom : $iota-padding-default !important; }
+      .#{$iota-utility-namespace}pl\@#{$breakpointName}  { padding-left   : $iota-padding-default !important; }
+      .#{$iota-utility-namespace}pv\@#{$breakpointName}  { padding-top    : $iota-padding-default !important; padding-bottom : $iota-padding-default !important; }
+      .#{$iota-utility-namespace}ph\@#{$breakpointName}  { padding-right  : $iota-padding-default !important; padding-left   : $iota-padding-default !important; } 
+      
+      @each $paddingName, $paddingSize in $iota-padding-extra {
+
+        .#{$iota-utility-namespace}p#{$paddingName}\@#{$breakpointName}   { padding        : $paddingSize !important; }
+        .#{$iota-utility-namespace}pt#{$paddingName}\@#{$breakpointName}  { padding-top    : $paddingSize !important; }
+        .#{$iota-utility-namespace}pr#{$paddingName}\@#{$breakpointName}  { padding-right  : $paddingSize !important; }
+        .#{$iota-utility-namespace}pb#{$paddingName}\@#{$breakpointName}  { padding-bottom : $paddingSize !important; }
+        .#{$iota-utility-namespace}pl#{$paddingName}\@#{$breakpointName}  { padding-left   : $paddingSize !important; }
+        .#{$iota-utility-namespace}pv#{$paddingName}\@#{$breakpointName}  { padding-top    : $paddingSize !important; padding-bottom : $paddingSize !important; }
+        .#{$iota-utility-namespace}ph#{$paddingName}\@#{$breakpointName}  { padding-right  : $paddingSize !important; padding-left   : $paddingSize !important; }
+
+      }
+      
+    }
+    
+  }
+  
+}

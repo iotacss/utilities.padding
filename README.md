@@ -33,3 +33,8 @@ $iota-padding-extra   : () !default;
 .u-pl
 .u-pv
 .u-ph
+
+
+// Responsive Class Syntax
+
+.u-[name]@[breakpoint-name]  // Example: .u-p@sm
