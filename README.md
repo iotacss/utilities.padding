@@ -20,6 +20,7 @@ npm install --save iotacss-padding
 ```
 $iota-padding-default : 10px !default;
 $iota-padding-extra   : () !default;
+$iota-padding--res    : false !default;
 ```
 
 
