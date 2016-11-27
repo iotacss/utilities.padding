@@ -24,41 +24,17 @@ $iota-utils-padding-breakpoints          : $iota-global-breakpoints !default;
 
 
 
-// Padding Utilities
-
-@include _iota-utility-generate-spacing(
-  'padding',
-  $iota-utils-padding-default
+@include _iota-generate-spacing(
+  padding,
+  $iota-utils-padding-default,
+  $iota-utils-padding-extra,
+  $iota-utils-padding-namespace,
+  $iota-utils-padding-top-name,
+  $iota-utils-padding-right-name,
+  $iota-utils-padding-bottom-name,
+  $iota-utils-padding-left-name,
+  $iota-utils-padding-vertical-name,
+  $iota-utils-padding-horizontal-name,
+  $iota-utils-padding-res,
+  $iota-utils-padding-breakpoints
 );
-
-@each $padding-name, $padding-size in $iota-utils-padding-extra {
-  @include _iota-utility-generate-spacing(
-    'padding',
-    $padding-size,
-    $padding-name
-  );
-}
-
-
-
-
-// Padding Responsive Utilities
-
-@if ($iota-utils-padding-res == true) {
-
-  @include _iota-utility-generate-responsive-spacing(
-    'padding',
-    $iota-utils-padding-breakpoints,
-    $iota-utils-padding-default
-  );
-
-  @each $padding-name, $padding-size in $iota-utils-padding-extra {
-    @include _iota-utility-generate-responsive-spacing(
-      'padding',
-      $iota-utils-padding-breakpoints,
-      $padding-size,
-      $padding-name
-  );
-  }
-
-}
