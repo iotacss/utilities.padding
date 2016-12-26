@@ -1,6 +1,6 @@
 {
   "name": "iotacss-utils-padding",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Padding utility for iotaCSS",
   "main": "_utilities.padding.scss",
   "repository": {
